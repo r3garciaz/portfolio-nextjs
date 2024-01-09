@@ -1,18 +1,19 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type {NextApiRequest, NextApiResponse} from 'next';
+
+import {EmailTemplate} from '../../components/EmailTemplates/ContactForm';
 import {emailService} from '../../data/data';
-import { EmailTemplate } from '../../components/EmailTemplates/ContactForm';
-import { resend } from '../../lib/resend';
+import {resend} from '../../lib/resend';
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const body = JSON.parse(req.body);
-  const { name, email, message } = body;
+  const {name, email, message} = body;
 
-  const { data, error } = await resend.emails.send({
+  const {data, error} = await resend.emails.send({
     from: `${emailService.fromName} <${emailService.fromEmail}>`,
     to: [`${emailService.toEmail}`],
     subject: `${emailService.subject}`,
     text: '',
-    react: EmailTemplate({ name: name, email: email, message: message }),
+    react: EmailTemplate({name: name, email: email, message: message}),
   });
 
   if (error) {

@@ -1,4 +1,5 @@
-import {FC, memo, useCallback, useMemo, useState, useRef} from 'react';
+import React, {FC, memo, useCallback, useMemo, useRef, useState} from 'react';
+
 import Spinner from '../../Shared/Spinner';
 
 interface FormData {
@@ -35,6 +36,19 @@ const ContactForm: FC = memo(() => {
     [data],
   );
 
+  const sendEmail = useCallback(async () => {
+    // await sendEmail(data);
+    const fetcher = await fetch('/api/send', {
+      method: 'POST',
+      headers: {
+        contentType: 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    return await fetcher.json();
+  },[data]);
+
   const handleSendMessage = useCallback(
     async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
@@ -53,28 +67,14 @@ const ContactForm: FC = memo(() => {
       }, 5000);
       ref.current?.reset();
     },
-    [data],
+    [sendEmail],
   );
-
-  const sendEmail = async () => {
-    // await sendEmail(data);
-    const fetcher = await fetch('/api/send', {
-      method: 'POST',
-      headers: {
-        contentType: 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
-
-    const response = await fetcher.json();
-    return response;
-  };
 
   const inputClasses =
     'bg-neutral-700 border-0 focus:border-0 focus:outline-none focus:ring-1 focus:ring-orange-600 rounded-md placeholder:text-neutral-400 placeholder:text-sm text-neutral-200 text-sm';
 
   return (
-    <form ref={ref} className="grid min-h-[320px] grid-cols-1 gap-y-4" method="POST" onSubmit={handleSendMessage}>
+    <form className="grid min-h-[320px] grid-cols-1 gap-y-4" method="POST" onSubmit={handleSendMessage} ref={ref}>
       {/* Show spinner during submit */}
       {isSubmitting && <Spinner />}
 
