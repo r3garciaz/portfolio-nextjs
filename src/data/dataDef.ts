@@ -148,3 +148,20 @@ export interface Social {
   Icon: FC<IconProps>;
   href: string;
 }
+
+/**
+ * Email Send Service
+ **/
+export interface EmailTemplateProps {
+  name: string;
+  email: string;
+  message: string;
+}
+
+export interface EmailService {
+  fromName: string;
+  fromEmail: string;
+  toEmail: string;
+  subject: string;
+}
+

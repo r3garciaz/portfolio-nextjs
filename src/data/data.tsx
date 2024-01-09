@@ -30,6 +30,7 @@ import {
   About,
   ContactSection,
   ContactType,
+  EmailService,
   Hero,
   HomepageMeta,
   PortfolioItem,
@@ -442,3 +443,14 @@ export const socialLinks: Social[] = [
   {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/r3garciaz/'},
   {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/r3garciaz'},
 ];
+
+/**
+ * Email Send Service
+ **/
+
+export const emailService: EmailService = {
+  fromName: 'Contact Form',
+  fromEmail: 'contact@mail.r3garciaz.dev',
+  toEmail: 'garcia.reinaldo@gmail.com',
+  subject: 'New Contact Form Submission',
+}
