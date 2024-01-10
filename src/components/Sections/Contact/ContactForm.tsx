@@ -37,16 +37,22 @@ const ContactForm: FC = memo(() => {
   );
 
   const sendEmail = useCallback(async () => {
-    // await sendEmail(data);
-    const fetcher = await fetch('/api/send', {
-      method: 'POST',
-      headers: {
-        contentType: 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
+    try {
+      const fetcher = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          contentType: 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
 
-    return await fetcher.json();
+      return await fetcher.json();
+      
+    } catch (error) {
+      setIsSubmitting(false)
+      setSubmitStatus('error');
+    }
+
   },[data]);
 
   const handleSendMessage = useCallback(
