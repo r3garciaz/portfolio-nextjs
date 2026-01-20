@@ -1,6 +1,6 @@
 import {RefObject, useEffect} from 'react';
 
-const useDetectOutsideClick = <T extends HTMLElement>(ref: RefObject<T>, handler: (event: Event) => void) => {
+const useDetectOutsideClick = (ref: RefObject<Element | null>, handler: (event: Event) => void) => {
   useEffect(() => {
     const listener = (event: Event) => {
       // Do nothing if clicking ref's element or descendent elements

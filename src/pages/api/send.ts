@@ -1,4 +1,5 @@
 import type {NextApiRequest, NextApiResponse} from 'next';
+import React from 'react';
 
 import {ContactFormTemplate} from '../../components/EmailTemplates/ContactForm';
 import {emailService} from '../../data/data';
@@ -13,7 +14,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     to: [`${emailService.toEmail}`],
     subject: `${emailService.subject}`,
     text: '',
-    react: ContactFormTemplate({name: name, email: email, message: message}),
+    react: ContactFormTemplate({name: name, email: email, message: message}) as React.ReactElement,
   });
 
   if (error) {
