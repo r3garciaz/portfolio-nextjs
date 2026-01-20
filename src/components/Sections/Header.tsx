@@ -1,4 +1,4 @@
-import {Dialog, Transition} from '@headlessui/react';
+import {Dialog, DialogBackdrop, Transition} from '@headlessui/react';
 import {Bars3BottomRightIcon} from '@heroicons/react/24/outline';
 import classNames from 'classnames';
 import Link from 'next/link';
@@ -85,7 +85,7 @@ const MobileNav: FC<{navSections: SectionId[]; currentSection: SectionId | null}
               leave="transition-opacity ease-linear duration-300"
               leaveFrom="opacity-100"
               leaveTo="opacity-0">
-              <Dialog.Overlay className="fixed inset-0 bg-stone-900 bg-opacity-75" />
+              <DialogBackdrop className="fixed inset-0 bg-stone-900 bg-opacity-75" />
             </Transition.Child>
             <Transition.Child
               as={Fragment}
