@@ -62,7 +62,7 @@
     "typescript": "5.3.2"
   },
   "resolutions": {
-    "autoprefixer": "10.4.5"
+    "autoprefixer": "10.4.16"
   },
   "overrides": {
     "@types/react": "19.2.8"
