@@ -1,33 +1,46 @@
-// import dynamic from 'next/dynamic';
-import {FC, memo} from 'react';
 
-import Page from '../components/Layout/Page';
-import About from '../components/Sections/About';
-import Contact from '../components/Sections/Contact';
-import Footer from '../components/Sections/Footer';
-import Hero from '../components/Sections/Hero';
-// import Portfolio from '../components/Sections/Portfolio';
-import Resume from '../components/Sections/Resume';
-// import Testimonials from '../components/Sections/Testimonials';
-import {homePageMeta} from '../data/data';
+import { FC, memo } from 'react';
+import Head from 'next/head';
 
-// eslint-disable-next-line react-memo/require-memo
-// const Header = dynamic(() => import('../components/Sections/Header'), {ssr: false});
+import Header from '../components/Modern/Layout/Header';
+import Footer from '../components/Modern/Layout/Footer';
+import Hero from '../components/Modern/Sections/Hero';
+import About from '../components/Modern/Sections/About';
+import Skills from '../components/Modern/Sections/Skills';
+import Experience from '../components/Modern/Sections/Experience';
+// import Projects from '../components/Modern/Sections/Projects';
+import Contact from '../components/Modern/Sections/Contact';
+import { homePageMeta } from '../data/data';
 
-const Home: FC = memo(() => {
-  const {title, description} = homePageMeta;
+const Home: FC = () => {
+  const { title, description } = homePageMeta;
   return (
-    <Page description={description} title={title}>
-      {/*<Header />*/}
-      <Hero />
-      <About />
-      <Resume />
-      {/*<Portfolio />*/}
-      {/*<Testimonials />*/}
-      <Contact />
-      <Footer />
-    </Page>
-  );
-});
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        {/* Modern Meta Tags for PWA/Mobile */}
+        <meta name="theme-color" content="#09090b" />
+      </Head>
 
-export default Home;
+      <div className="flex flex-col min-h-screen bg-dark-950 text-dark-50 selection:bg-primary-500/30 selection:text-white">
+        <Header />
+
+        <main className="flex-grow flex flex-col gap-16 md:gap-24 pb-20 pt-20">
+          <Hero />
+          <About />
+          <Skills />
+          <Experience />
+          {/* <Projects /> */}
+          <Contact />
+        </main>
+
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default memo(Home);
