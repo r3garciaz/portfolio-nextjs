@@ -1,6 +1,6 @@
 
 import { FC, memo } from 'react';
-import { experience, education, SectionId } from '../../../data/data';
+import { experience, education, SectionId } from '../../data/data';
 import Section from '../UI/Section';
 
 const Timeline: FC = () => {
@@ -15,7 +15,7 @@ const Timeline: FC = () => {
                     </div>
 
                     <div className="border-l-2 border-dark-800 ml-3 space-y-12">
-                        {experience.map((item: import('../../../data/dataDef').TimelineItem, index: number) => (
+                        {experience.map((item: import('../../data/dataDef').TimelineItem, index: number) => (
                             <div key={index} className="relative pl-8 group">
                                 {/* Dot */}
                                 <div className="absolute -left-[9px] top-2 h-4 w-4 rounded-full border-2 border-dark-950 bg-dark-700 group-hover:bg-primary-500 transition-colors"></div>
@@ -41,7 +41,7 @@ const Timeline: FC = () => {
                     </div>
 
                     <div className="border-l-2 border-dark-800 ml-3 space-y-12">
-                        {education.map((item: import('../../../data/dataDef').TimelineItem, index: number) => (
+                        {education.map((item: import('../../data/dataDef').TimelineItem, index: number) => (
                             <div key={index} className="relative pl-8 group">
                                 {/* Dot */}
                                 <div className="absolute -left-[9px] top-2 h-4 w-4 rounded-full border-2 border-dark-950 bg-dark-700 group-hover:bg-primary-500 transition-colors"></div>
