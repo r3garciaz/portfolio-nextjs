@@ -34,15 +34,16 @@ const Hero: FC = () => {
                     {/* Badge */}
                     <div className="inline-flex self-start px-3 py-1 rounded-full border border-primary-500/30 bg-primary-500/10 backdrop-blur-md">
                         <span className="text-xs font-mono text-primary-400 font-semibold tracking-wider uppercase">
-                            Senior Cloud Engineer & Developer
+                            Senior Developer & Cloud Engineer
                         </span>
                     </div>
 
                     {/* Headline */}
-                    <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-[1.1]">
-                        Architecting <br className="hidden md:block" />
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-primary-200">
-                            Resilient Cloud Systems.
+                    <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
+                        {heroData.name} <br />
+                        {/* Architecting <br className="hidden md:block" /> */}
+                        <span className="text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-primary-200">
+                            Architecting Resilient Cloud Systems.
                         </span>
                     </h1>
 

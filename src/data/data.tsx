@@ -44,8 +44,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'Reinaldo García',
-  description: "Professional Portfolio - r3garciaz",
+  title: 'Reinaldo García Zúñiga',
+  description: "Professional Portfolio Reinaldo García Zúñiga - r3garciaz",
 };
 
 /**
@@ -69,7 +69,8 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Reinaldo García.`,
+  name: `I'm Reinaldo García Z.`,
+  realName: 'Reinaldo García Zúñiga',
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
@@ -471,8 +472,8 @@ export const contact: ContactSection = {
   items: [
     {
       type: ContactType.Email,
-      text: 'garcia.reinaldo@gmail.com',
-      href: 'mailto:garcia.reinaldo@gmail.com',
+      text: 'contact@r3garciaz.dev',
+      href: 'mailto:contact@r3garciaz.dev',
     },
     {
       type: ContactType.Location,
@@ -487,7 +488,7 @@ export const contact: ContactSection = {
     {
       type: ContactType.LinkedIn,
       text: 'r3garciaz',
-      href: 'https://www.linkedin.com/in/r3garciaz/',
+      href: 'https://www.linkedin.com/in/reinaldo-garcia-z/',
     },
   ],
 };

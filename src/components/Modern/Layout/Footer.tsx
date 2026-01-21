@@ -1,7 +1,7 @@
 
 import { FC, memo } from 'react';
 
-import { socialLinks } from '../../../data/data';
+import { socialLinks, heroData } from '../../../data/data';
 
 const Footer: FC = () => {
     return (
@@ -9,7 +9,7 @@ const Footer: FC = () => {
             <div className="mx-auto flex max-w-screen-xl flex-col items-center justify-between gap-6 px-4 md:flex-row">
                 <div className="flex flex-col gap-2">
                     <span className="text-lg font-bold text-white">r3garciaz<span className="text-primary-500">.dev</span></span>
-                    <p className="text-sm text-dark-400">© 2026 Reinaldo García. All rights reserved.</p>
+                    <p className="text-sm text-dark-400">© 2026 {heroData.realName}. All rights reserved.</p>
                 </div>
 
                 <div className="flex gap-4">
