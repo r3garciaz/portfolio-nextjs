@@ -17,7 +17,7 @@ const Hero: FC = () => {
                 <Image
                     alt="Cloud Infrastructure Background"
                     fill
-                    src="/hero-bg.png"
+                    src="/hero-bg.webp"
                     quality={100}
                     className="object-cover object-center"
                     priority

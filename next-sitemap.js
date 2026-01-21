@@ -1,6 +1,6 @@
 /* eslint-env node */
 module.exports = {
-  siteUrl: 'r3garciaz.dev',
+  siteUrl: 'https://r3garciaz.dev',
   exclude: ['/404*', '/500*'],
   transform: async (config, path) => {
     return {
