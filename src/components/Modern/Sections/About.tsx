@@ -17,7 +17,7 @@ const About: FC = () => {
                     <div className="relative h-96 w-full lg:h-[500px] rounded-3xl overflow-hidden">
                         {profileImageSrc ? (
                             <Image
-                                alt="about-me-image"
+                                alt="Reinaldo García Zúñiga - Senior Developer & Cloud Engineer Profile"
                                 className="h-full w-full object-cover"
                                 src={profileImageSrc}
                                 placeholder="blur"

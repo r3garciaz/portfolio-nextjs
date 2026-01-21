@@ -25,6 +25,8 @@ const Home: FC = () => {
         <meta content={title} property="og:title" />
         <meta content={description} property="og:description" />
         <meta content={`https://r3garciaz.dev${pathname}`} property="og:url" />
+        <meta content="https://r3garciaz.dev/hero-bg.webp" property="og:image" />
+        <meta content="website" property="og:type" />
 
         {/* Modern Meta Tags for PWA/Mobile */}
         <meta name="theme-color" content="#09090b" />
@@ -33,13 +35,40 @@ const Home: FC = () => {
         <link href={`https://r3garciaz.dev${pathname}`} key="canonical" rel="canonical" />
 
         {/* Twitter: https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup */}
+        <meta content="summary_large_image" name="twitter:card" />
         <meta content={title} name="twitter:title" />
         <meta content={description} name="twitter:description" />
+        <meta content="https://r3garciaz.dev/hero-bg.webp" name="twitter:image" />
 
         <link href="/favicon.png" rel="icon" sizes="any" />
         <link href="/icon.png" rel="icon" type="image/svg+xml" />
         <link href="/apple-touch-icon.png" rel="apple-touch-icon" />
         <link href="/site.webmanifest" rel="manifest" />
+
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Reinaldo García Zúñiga",
+              "url": "https://r3garciaz.dev",
+              "image": "https://r3garciaz.dev/hero-bg.webp",
+              "sameAs": [
+                "https://github.com/r3garciaz",
+                "https://www.linkedin.com/in/reinaldo-garcia-z/",
+                "https://twitter.com/r3garciaz"
+              ],
+              "jobTitle": "Senior Cloud Engineer",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Infosys (BHP)"
+              },
+              "description": description
+            })
+          }}
+        />
 
       </Head>
 
