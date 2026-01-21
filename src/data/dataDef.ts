@@ -24,6 +24,7 @@ export interface HomepageMeta {
 export interface Hero {
   imageSrc: string;
   name: string;
+  realName: string;
   description: React.JSX.Element;
   actions: HeroActionItem[];
 }
