@@ -73,7 +73,9 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        <strong className="text-stone-100">Full Stack Software Developer</strong>
+        <strong className="text-stone-100">Cloud Engineer at Infosys (BHP)</strong>
+        <br />
+        IaC | Cloud Architecture & Automation | DevOps | Software Development Background
       </p>
     </>
   ),
@@ -88,7 +90,7 @@ export const heroData: Hero = {
       href: `#${SectionId.Contact}`,
       text: 'Contact',
       primary: false,
-      Icon:EnvelopeIcon
+      Icon: EnvelopeIcon
     },
   ],
 };
@@ -98,10 +100,9 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  // description: `I am proud to have a unique background that combines system administration, cloud computing, computer networking and software development. In my journey as a computer scientist, I have regularly faced technical challenges, solved IT problems, collaborated with multi-disciplinary teams of people. My love for software development drives me internally and I enjoy every opportunity to tackle deeper technical challenges and continue to learn. I have worked in many different industries, from one of the world's largest copper cathode production companies to falling back in love with software development, working methodologies such as DevOps and the cloud. I also have experience in cross-platform mobile application development.`,
   description: `I take pride in my distinctive background, seamlessly blending system administration, cloud computing, computer networking, and software development. Throughout my career, I've embraced diverse technical challenges, resolving complicated IT issues, and collaborating with cross-functional teams. My passion for software development propels me, and I enthusiastically tackle complex technical hurdles while maintaining a commitment to continuous learning.
 
-I've navigated diverse industries, from a major copper cathode production company to reawakening my love for software development, where I embraced methodologies such as DevOps and leveraged the power of the cloud. One of my strengths lies in backend development.
+I've navigated diverse industries, from a major copper cathode production company to reawakening my love for software development, where I embraced methodologies such as DevOps and leveraged the power of the cloud. My current focus is on Cloud Engineering, Infrastructure as Code (IaC), and automation.
 
 In each endeavor, I prioritize tangible results, striving for positive impacts on projects. I invite you to explore my journey, where my unique skill set and dedication to innovation can contribute to your team's success.
 `,
@@ -109,7 +110,7 @@ In each endeavor, I prioritize tangible results, striving for positive impacts o
     // {label: 'Location', text: 'Chile', Icon: MapIcon},
     // {label: 'Age', text: '40', Icon: CalendarIcon},
     // {label: 'Nationality', text: 'Chilean', Icon: FlagIcon},
-    {label: 'Interests', text: 'Automobiles, Sciences, Nature, Understanding the "why" of things', Icon: SparklesIcon},
+    { label: 'Interests', text: 'Automobiles, Sciences, Nature, Understanding the "why" of things', Icon: SparklesIcon },
     // {label: 'Study', text: 'INACAP', Icon: AcademicCapIcon},
     // {label: 'Employment', text: 'BailacThor.', Icon: BuildingOffice2Icon},
   ],
@@ -122,70 +123,72 @@ export const skills: SkillGroup[] = [
   {
     name: 'Spoken languages',
     skills: [
-      {name: 'Spanish', level: 10},
-      {name: 'English', level: 6}
+      { name: 'Spanish', level: 10 },
+      { name: 'English', level: 6 }
     ],
   },
   {
     name: 'Programming languages',
     skills: [
-      {name: 'C#', level: 9},
-      {name: 'JavaScript', level: 7},
-      {name: 'TypeScript', level: 7},
+      { name: 'C#', level: 9 },
+      { name: 'JavaScript', level: 7 },
+      { name: 'TypeScript', level: 7 },
     ]
   },
   {
     name: 'Frontend',
     skills: [
-      {name: 'HTML/CSS', level: 8},
-      {name: 'Angular', level: 6},
-      {name: 'Blazor', level: 6},
-      {name: 'jQuery', level: 8},
+      { name: 'HTML/CSS', level: 8 },
+      { name: 'Angular', level: 6 },
+      { name: 'Blazor', level: 6 },
+      { name: 'jQuery', level: 8 },
     ]
   },
   {
     name: 'Backend',
     skills: [
-      {name: '.NET', level: 9},
-      {name: 'ASP.NET', level: 9},
+      { name: '.NET', level: 9 },
+      { name: 'ASP.NET', level: 9 },
     ]
   },
   {
     name: 'Mobile development',
     skills: [
-      {name: 'React Native', level: 6},
-      {name: 'Ionic', level: 8},
-      {name: 'Cordova', level: 8},
+      { name: 'React Native', level: 6 },
+      { name: 'Ionic', level: 8 },
+      { name: 'Cordova', level: 8 },
     ],
   },
   {
     name: 'Cloud',
     skills: [
-      {name: 'AWS', level: 8},
-      {name:'Azure', level: 8},
-
+      { name: 'AWS', level: 9 },
+      { name: 'Azure', level: 9 },
+      { name: 'Cloud Architecture', level: 8 },
     ]
   },
   {
-    name: 'DevOps',
+    name: 'DevOps / IaC',
     skills: [
-      {name: 'Docker', level: 9},
-      {name: 'CI/CD', level: 8},
+      { name: 'Docker', level: 9 },
+      { name: 'Terraform', level: 8 },
+      { name: 'Infrastructure as Code (IaC)', level: 8 },
+      { name: 'CI/CD', level: 8 },
     ]
   },
   {
     name: 'Databases',
     skills: [
-      {name: 'SQL', level: 8},
-      {name: 'NoSQL', level: 6},
+      { name: 'SQL', level: 9 },
+      { name: 'NoSQL', level: 7 },
     ]
   },
   {
     name: 'Other',
     skills: [
-      {name: 'Communication skills', level: 8},
-      {name: 'Teamwork', level: 8},
-      {name: 'Problem solving', level: 8}
+      { name: 'Communication skills', level: 8 },
+      { name: 'Teamwork', level: 8 },
+      { name: 'Problem solving', level: 8 }
     ]
   }
 ];
@@ -267,6 +270,30 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
+    date: 'December 2025',
+    location: 'Microsoft',
+    title: 'AZ 900: Microsoft Azure Fundamentals',
+    content: <p>Credential ID: OV5HKOIWPR</p>,
+  },
+  {
+    date: 'September 2025',
+    location: 'LinkedIn',
+    title: 'Introduction to Terraform on Azure',
+    content: <p>Infrastructure as Code (IaC) with Terraform.</p>,
+  },
+  {
+    date: 'October 2022',
+    location: 'Amazon Web Services (AWS)',
+    title: 'AWS Academy Graduate - AWS Academy Cloud Foundations',
+    content: <p>Foundational knowledge of cloud concepts, AWS services, security, architecture, pricing, and support.</p>,
+  },
+  {
+    date: 'October 2021',
+    location: 'Escalab | Tech Talents Hub',
+    title: 'Master en Javascript & Mobile App Developer (React Native)',
+    content: <p>Advanced Javascript and mobile development with React Native.</p>,
+  },
+  {
     date: '2005',
     location: 'INACAP, Copiapó. Chile',
     title: 'Programmer Analyst',
@@ -282,10 +309,28 @@ export const education: TimelineItem[] = [
 
 export const experience: TimelineItem[] = [
   {
-    date:'April 2021 - Present',
-    location:'Bailac Thor',
-    title:'Senior Developer',
-    content:(
+    date: 'September 2025 - Present',
+    location: 'Infosys (BHP)',
+    title: 'Cloud Engineer',
+    content: (
+      <div className="whitespace-pre-wrap">
+        <ul className="list-disc">
+          <li>Integrated into the BHP Cloud team, collaborating on the design and operation of secure and scalable infrastructures.</li>
+          <li>Focus on Infrastructure as Code (IaC), automation, and system resilience in mission-critical environments.</li>
+          <li>Contributing to the development of solutions that enable technological modernization and large-scale operational continuity.</li>
+        </ul>
+        <br />
+        <span className="flex-1 text-sm font-medium italic sm:flex-none">
+          Skills: AWS • Azure • Cloud Architecture • Infrastructure as Code (IaC) • Terraform • DevOps • Automation • Distributed Systems
+        </span>
+      </div>
+    ),
+  },
+  {
+    date: 'May 2021 - September 2025',
+    location: 'Bailac Thor',
+    title: 'Senior Developer',
+    content: (
       <div className='whitespace-pre-wrap'>
         <span>
           <ul className="list-disc">
@@ -300,7 +345,7 @@ export const experience: TimelineItem[] = [
         </span>
         <br />
         <span className="flex-1 text-sm font-medium italic sm:flex-none">
-          Skills: .NET • C# • API • JQuery • CSS • Fullstack • Javascript • GNU/Linux • AWS • Azure DevOps 
+          Skills: .NET • C# • API • JQuery • CSS • Fullstack • Javascript • GNU/Linux • AWS • Azure DevOps
           • SQL • NoSQL • DevOps • Cloud Architecture • CI/CD • Docker • Ionic/Cordova • Android • iOS
         </span>
       </div>
@@ -317,12 +362,12 @@ export const experience: TimelineItem[] = [
         <ul className='list-disc'>
           <li>
             Development of <a href="https://catalogo.pascualetm.com" target="_blank"><span
-            className="text-orange-600 italic">PascualETM</span></a> <span className="text-gray-500">(Enterprise Tire Management)</span>system,
+              className="text-orange-600 italic">PascualETM</span></a> <span className="text-gray-500">(Enterprise Tire Management)</span>system,
             a unique world-class asset management software for off-highway mining equipment.
           </li>
           <li>
             Development of <a href="https://wms.pascualetm.com" target="_blank"><span
-            className="text-orange-600 italic">PascualWMS</span></a><span className="text-gray-500"> (Welding Management System)</span>,
+              className="text-orange-600 italic">PascualWMS</span></a><span className="text-gray-500"> (Welding Management System)</span>,
             a welding work order control system for large-scale mining.
           </li>
           <li>
@@ -337,42 +382,54 @@ export const experience: TimelineItem[] = [
     )
   },
   {
-    date:'September 2011 - March 2017',
-    location:'Corporación Nacional del Cobre, Codelco',
-    title:'Analyst',
-    content:(
+    date: 'September 2011 - March 2017',
+    location: 'Corporación Nacional del Cobre, Codelco',
+    title: 'Analista de gestión / Confiabilidad / Mantenimiento',
+    content: (
       <div>
-        <ul className='list-disc'>
-          <li>Area budget manager</li>
-          <li>Statistician, Mine Maintenance Planning Department</li>
-          <li>Implementation of CalemEAM, software for asset management and KPI for mining equipment</li>
-          <li>Development and implementation of a KPI control system for reconciliation of payment statements of collaborating companies for the mine maintenance area.</li>
+        <ul className="list-disc">
+          <li>Responsible for budget, administrative management, and component repair for the Mine Maintenance area.</li>
+          <li>Statistician for the Mine Maintenance Planning Department.</li>
+          <li>Implementation of CalemEAM, software for asset management and KPI for mining equipment.</li>
+          <li>Development and implementation of a KPI control system for reconciliation of payment statements of collaborating companies.</li>
         </ul>
       </div>
-    )
+    ),
   },
   {
-    date:'May 2008 - September 2011',
-    location:'SQM Nitratos S.A',
-    title:'IBM Maximo Administrator',
-    content:(
+    date: 'May 2008 - September 2011',
+    location: 'SQM Nitratos S.A',
+    title: 'IBM Maximo Administrator',
+    content: (
       <div>
-        <ul className='list-disc'>
-          <li>In charge of IBM MAXIMO Asset Management System</li>
+        <ul className="list-disc">
+          <li>In charge of IBM MAXIMO Asset Management System.</li>
           <li>Head of the digitization area Maximo.</li>
           <li>Leader reimplementation of IBM MAXIMO system for the entire mine maintenance area.</li>
         </ul>
       </div>
-    )
+    ),
+  },
+  {
+    date: 'February 2008 - April 2008',
+    location: 'Labeling',
+    title: 'Analista Programador',
+    content: (
+      <div>
+        <ul className="list-disc">
+          <li>Programming and development of a dispatch control system for mining operators.</li>
+        </ul>
+      </div>
+    ),
   },
   {
     date: 'February 2006 - December 2007',
     location: 'Pesquera Bahía Caldera',
-    title: 'Advisor - Computer and Information Technology Department Manager',
+    title: 'Técnico informático',
     content: (
       <div>
-        <ul className='list-disc'>
-          <li>Responsible for the Computer and Information Technology department and its computer networks.</li>
+        <ul className="list-disc">
+          <li>Responsible for the entire IT department and computer networks.</li>
           <li>Implementation and administration of GNU/Linux Server.</li>
         </ul>
       </div>
@@ -439,9 +496,9 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/r3garciaz'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/r3garciaz/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/r3garciaz'},
+  { label: 'Github', Icon: GithubIcon, href: 'https://github.com/r3garciaz' },
+  { label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/r3garciaz/' },
+  { label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/r3garciaz' },
 ];
 
 /**
