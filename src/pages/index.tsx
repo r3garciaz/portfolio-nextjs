@@ -2,14 +2,14 @@
 import { FC, memo } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import Header from '../components/Modern/Layout/Header';
-import Footer from '../components/Modern/Layout/Footer';
-import Hero from '../components/Modern/Sections/Hero';
-import About from '../components/Modern/Sections/About';
-import Skills from '../components/Modern/Sections/Skills';
-import Experience from '../components/Modern/Sections/Experience';
-// import Projects from '../components/Modern/Sections/Projects';
-import Contact from '../components/Modern/Sections/Contact';
+import Header from '../components/Layout/Header';
+import Footer from '../components/Layout/Footer';
+import Hero from '../components/Sections/Hero';
+import About from '../components/Sections/About';
+import Skills from '../components/Sections/Skills';
+import Experience from '../components/Sections/Experience';
+// import Projects from '../components/Sections/Projects';
+import Contact from '../components/Sections/Contact';
 import { homePageMeta } from '../data/data';
 
 const Home: FC = () => {

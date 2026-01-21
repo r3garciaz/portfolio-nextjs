@@ -1,7 +1,7 @@
 
 import { FC, memo } from 'react';
 
-import { socialLinks, heroData } from '../../../data/data';
+import { socialLinks, heroData } from '../../data/data';
 
 const Footer: FC = () => {
     return (

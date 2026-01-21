@@ -4,7 +4,7 @@ import { Bars3BottomRightIcon } from '@heroicons/react/24/outline';
 import classNames from 'classnames';
 import { FC, Fragment, memo, useCallback, useMemo, useState } from 'react';
 
-import { SectionId } from '../../../data/data';
+import { SectionId } from '../../data/data';
 import { useEffect } from 'react';
 
 export const headerLinks = [

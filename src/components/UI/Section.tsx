@@ -2,7 +2,7 @@
 import classNames from 'classnames';
 import { FC, PropsWithChildren } from 'react';
 
-import { SectionId } from '../../../data/data';
+import { SectionId } from '../../data/data';
 
 interface SectionProps {
     sectionId: SectionId;

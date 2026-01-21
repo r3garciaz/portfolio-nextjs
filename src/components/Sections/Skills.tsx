@@ -2,7 +2,7 @@
 import { FC, memo } from 'react';
 import classNames from 'classnames';
 
-import { skills, SectionId } from '../../../data/data';
+import { skills, SectionId } from '../../data/data';
 import Section from '../UI/Section';
 import Card from '../UI/Card';
 
@@ -21,7 +21,7 @@ const Skills: FC = () => {
 
                 {/* Bento Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr grid-flow-dense">
-                    {skills.map((group: import('../../../data/dataDef').SkillGroup, index: number) => {
+                    {skills.map((group: import('../../data/dataDef').SkillGroup, index: number) => {
                         // Smart Spans for Bento Layout
                         // "Cloud" and "DevOps" are key, so they get more space.
                         const isMain = group.name === 'Cloud' || group.name === 'DevOps / IaC';
@@ -45,7 +45,7 @@ const Skills: FC = () => {
                                 </div>
 
                                 <div className="flex flex-wrap gap-2">
-                                    {group.skills.map((skill: import('../../../data/dataDef').Skill, sIdx: number) => (
+                                    {group.skills.map((skill: import('../../data/dataDef').Skill, sIdx: number) => (
                                         <div
                                             key={sIdx}
                                             className={classNames(

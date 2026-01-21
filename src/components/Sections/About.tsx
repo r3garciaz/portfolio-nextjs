@@ -2,7 +2,7 @@
 import { FC, memo } from 'react';
 import Image from 'next/image';
 
-import { aboutData, SectionId } from '../../../data/data';
+import { aboutData, SectionId } from '../../data/data';
 import Section from '../UI/Section';
 import Card from '../UI/Card';
 
@@ -48,7 +48,7 @@ const About: FC = () => {
 
                     {/* Info Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-                        {aboutItems.map(({ label, text, Icon }: import('../../../data/dataDef').AboutItem, idx: number) => (
+                        {aboutItems.map(({ label, text, Icon }: import('../../data/dataDef').AboutItem, idx: number) => (
                             <div key={idx} className="flex items-start gap-4 p-4 rounded-xl bg-dark-900/50 border border-dark-800/50">
                                 {Icon && <Icon className="h-6 w-6 text-primary-500 mt-1" />}
                                 <div className="flex flex-col">

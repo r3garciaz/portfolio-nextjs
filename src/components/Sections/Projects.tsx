@@ -1,7 +1,7 @@
 
 import { FC, memo } from 'react';
 import Image from 'next/image';
-import { portfolioItems, SectionId } from '../../../data/data';
+import { portfolioItems, SectionId } from '../../data/data';
 import Section from '../UI/Section';
 import Card from '../UI/Card';
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
@@ -16,7 +16,7 @@ const Projects: FC = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {portfolioItems.map((item: import('../../../data/dataDef').PortfolioItem, index: number) => (
+                    {portfolioItems.map((item: import('../../data/dataDef').PortfolioItem, index: number) => (
                         <Card key={index} className="!p-0 overflow-hidden group relative h-[300px]">
                             {/* Image Background */}
                             <div className="absolute inset-0 h-full w-full">

@@ -2,7 +2,7 @@
 import { FC, memo } from 'react';
 import Image from 'next/image';
 
-import { heroData, SectionId } from '../../../data/data';
+import { heroData, SectionId } from '../../data/data';
 import Section from '../UI/Section';
 
 const Hero: FC = () => {

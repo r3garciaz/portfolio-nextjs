@@ -1,7 +1,7 @@
 
 import { FC, memo } from 'react';
-import { contact, SectionId } from '../../../data/data';
-import { ContactType } from '../../../data/dataDef';
+import { contact, SectionId } from '../../data/data';
+import { ContactType } from '../../data/dataDef';
 import Section from '../UI/Section';
 import { EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline';
 import Card from '../UI/Card';
@@ -16,7 +16,7 @@ const Contact: FC = () => {
                         <p className="text-dark-300 text-lg">{contact.description}</p>
 
                         <div className="flex flex-col sm:flex-row gap-6 mt-4">
-                            {contact.items.map((item: import('../../../data/dataDef').ContactItem, idx: number) => {
+                            {contact.items.map((item: import('../../data/dataDef').ContactItem, idx: number) => {
                                 // Simple mapping for display
                                 const isEmail = item.type === ContactType.Email;
                                 const Icon = isEmail ? EnvelopeIcon : MapPinIcon; // Simplified for now
