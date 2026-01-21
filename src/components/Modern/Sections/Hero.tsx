@@ -16,11 +16,12 @@ const Hero: FC = () => {
             <div className="absolute inset-0 z-0">
                 <Image
                     alt="Cloud Infrastructure Background"
+                    fetchPriority="high"
                     fill
-                    src="/hero-bg.webp"
-                    quality={100}
-                    className="object-cover object-center"
                     priority
+                    quality={100}
+                    src="/hero-bg.webp"
+                    className="object-cover object-center"
                 />
                 {/* Heavy Gradient Overlay for Readability */}
                 <div className="absolute inset-0 bg-gradient-to-r from-dark-950/95 via-dark-950/80 to-dark-950/40"></div>

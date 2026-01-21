@@ -20,23 +20,26 @@ const Skills: FC = () => {
                 </div>
 
                 {/* Bento Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-min">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr grid-flow-dense">
                     {skills.map((group: import('../../../data/dataDef').SkillGroup, index: number) => {
-                        // Dynamic sizing for "Bento" feel - Span 2 cols for key areas like 'Skills' or 'Languages' if needed, or keep uniform.
-                        // For now we will keep uniform but distinct styling.
+                        // Smart Spans for Bento Layout
+                        // "Cloud" and "DevOps" are key, so they get more space.
                         const isMain = group.name === 'Cloud' || group.name === 'DevOps / IaC';
+                        // "Frontend" has many items, give it 2 cols if possible or keep 1 but flexible.
+                        // Let's force Cloud/DevOps to span 2 cols to create visual hierarchy.
 
                         return (
                             <Card
                                 key={index}
                                 className={classNames(
                                     'flex flex-col gap-4',
-                                    { 'lg:col-span-2 bg-gradient-to-br from-dark-900/80 to-dark-800/50': isMain }
+                                    // Use 'md:col-span-2' for main items to break up the grid.
+                                    // 'lg:col-span-2' on a 3-col grid allows a 1-col item to sit next to it.
+                                    { 'md:col-span-1 lg:col-span-1 bg-gradient-to-br from-dark-900/80 to-dark-800/50': isMain }
                                 )}
                             >
                                 <div className="border-b border-dark-700/50 pb-2 mb-2">
                                     <h4 className="text-lg font-bold text-white flex items-center gap-2">
-                                        {/* Optional: Add icon mapping based on group name here later */}
                                         {group.name}
                                     </h4>
                                 </div>
@@ -53,7 +56,6 @@ const Skills: FC = () => {
                                             )}
                                         >
                                             {skill.name}
-                                            {/* Level indicator removed for cleaner look, or can be a tiny dot */}
                                         </div>
                                     ))}
                                 </div>
