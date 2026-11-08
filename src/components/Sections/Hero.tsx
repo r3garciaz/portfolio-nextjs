@@ -59,6 +59,7 @@ const Hero: FC = () => {
                             <a
                                 key={text}
                                 href={href}
+                                target="_blank"
                                 className={`
                                     relative inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-base transition-all duration-300
                                     ${primary
